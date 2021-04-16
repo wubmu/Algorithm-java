@@ -85,6 +85,7 @@ public void solve1(){
     for (int i = 1; i < line.length(); i++) {
         res += (i - num[line.charAt(i) - 'a']) *(n - i + 1);
         num[line.charAt(i) - 'a'] = i;
+
     }
 
     System.out.println(res);
