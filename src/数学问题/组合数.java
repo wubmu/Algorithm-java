@@ -41,5 +41,18 @@ public class 组合数 {
     }
 
 
+    public static void main(String[] args) {
+
+        int N = 2500 ,mod = (int) (1e9+7);
+        int[][] c = new int[N][N];
+        for (int i = 0; i <N ; i++) {
+            for (int j = 0; j <= i  ; j++) {
+                if (j==0) c[i][j]=1;
+                else c[i][j] = (c[i-1][j-1]+c[i-1][j]) ;
+            }
+        }
+
+        System.out.println(c[100][20]);
+    }
 
 }
